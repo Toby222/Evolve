@@ -12,24 +12,24 @@ import { loc } from './locale.js';
 export function enableDebug(){
     if (global.settings.expose){
         window.evolve = {
-            actions: deepClone(actions),
-            races: deepClone(races),
-            tradeRatio: JSON.parse(JSON.stringify(tradeRatio)),
-            craftCost: JSON.parse(JSON.stringify(craftCost())),
-            atomic_mass: JSON.parse(JSON.stringify(atomic_mass)),
-            f_rate: JSON.parse(JSON.stringify(f_rate)),
-            checkTechRequirements: deepClone(checkTechRequirements),
-            checkAffordable: deepClone(checkAffordable),
-            adjustCosts: deepClone(adjustCosts),
-            armyRating: deepClone(armyRating),
-            tradeBuyPrice: deepClone(tradeBuyPrice),
-            tradeSellPrice: deepClone(tradeSellPrice),
-            fuel_adjust: deepClone(fuel_adjust),
-            int_fuel_adjust: deepClone(int_fuel_adjust),
-            alevel: deepClone(alevel),
-            messageQueue: deepClone(messageQueue),
-            loc: deepClone(loc),
-            updateDebugData: deepClone(updateDebugData),
+            actions: actions,
+            races: races,
+            tradeRatio: tradeRatio,
+            craftCost: craftCost(),
+            atomic_mass: atomic_mass,
+            f_rate: f_rate,
+            checkTechRequirements: checkTechRequirements,
+            checkAffordable: checkAffordable,
+            adjustCosts: adjustCosts,
+            armyRating: armyRating,
+            tradeBuyPrice: tradeBuyPrice,
+            tradeSellPrice: tradeSellPrice,
+            fuel_adjust: fuel_adjust,
+            int_fuel_adjust: int_fuel_adjust,
+            alevel: alevel,
+            messageQueue: messageQueue,
+            loc: loc,
+            updateDebugData: updateDebugData,
             global: {},
             breakdown: {},
         };
@@ -38,8 +38,8 @@ export function enableDebug(){
 
 export function updateDebugData(){
     if (global.settings.expose){
-        window.evolve.global = JSON.parse(JSON.stringify(global));
-        window.evolve.craftCost = JSON.parse(JSON.stringify(craftCost())),
-        window.evolve.breakdown = JSON.parse(JSON.stringify(breakdown));
+        window.evolve.global = global;
+        window.evolve.craftCost = craftCost(),
+        window.evolve.breakdown = breakdown;
     }
 }
