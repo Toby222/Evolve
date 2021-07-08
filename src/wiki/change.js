@@ -12,6 +12,13 @@ const changeList = [
         ]
     },
     {
+        version: `1.1.9`,
+        date: `7/7/2021`,
+        changes: [
+            `Firework festival bug fix for cataclysm mode.`,
+        ]
+    },
+    {
         version: `1.1.8`,
         date: `7/3/2021`,
         changes: [

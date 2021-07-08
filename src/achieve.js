@@ -545,7 +545,10 @@ export function checkAchievements(){
         }
     }
 
-    if (eventActive('firework') && global.city.firework.on > 0){
+    if (eventActive('firework') && ( 
+        (!global.race['cataclysm'] && global.city.firework.on > 0) || 
+        (global.race['cataclysm'] && global.space.firework.on > 0) 
+        )){
         unlockFeat('firework',global.race.universe === 'micro' ? true : false);
     }
 

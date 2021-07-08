@@ -984,7 +984,6 @@ const spaceProjects = {
             }
         },
         bonfire: buildTemplate(`bonfire`,'space'),
-        firework: buildTemplate(`firework`,'space'),
         horseshoe: {
             id: 'space-horseshoe',
             title: loc('city_horseshoe'),
@@ -1165,6 +1164,7 @@ const spaceProjects = {
                 return false;
             }
         },
+        firework: buildTemplate(`firework`,'space'),
     },
     spc_sun: {
         info: {
